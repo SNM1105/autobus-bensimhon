@@ -93,7 +93,7 @@ function Contact() {
                   </div>
                   <div className="info-content">
                     <h4>Email Address</h4>
-                    <p>yair@autobusbensimhon.com</p>
+                    <p>autobusbensimhon@gmail.com</p>
                   </div>
                 </div>
 

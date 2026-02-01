@@ -91,7 +91,7 @@
 
 .stat-label {
   font-size: 1rem;
-  color: var(--color-gray);
+  color: var(--color-light-gray);
 }
 
 /* Values Section */
@@ -209,7 +209,7 @@
 }
 
 .services-image-card p {
-  color: var(--color-gray);
+  color: var(--color-light-gray);
   line-height: 1.7;
 }
 
@@ -240,6 +240,63 @@
 
 .cta .btn-primary:hover {
   background-color: #222;
+}
+
+/* Follow Us Section */
+.follow-us-section {
+  background-color: #e3e3e3;
+  padding: 60px 0;
+}
+
+.follow-us-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--color-black);
+}
+
+.follow-us-content p {
+  color: var(--color-gray);
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  color: var(--color-black);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.social-btn:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn svg {
+  color: var(--color-black);
+  transition: color 0.3s ease;
+}
+
+.social-btn:hover svg {
+  color: var(--color-black);
 }
 
 /* FAQ Section */
@@ -360,6 +417,26 @@
   }
 }
 
+@media (max-width: 768px) {
+  .follow-us-section {
+    padding: 40px 0;
+  }
+
+  .follow-us-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .social-buttons {
+    gap: 12px;
+  }
+
+  .social-btn {
+    padding: 16px 12px;
+    min-width: 100px;
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 576px) {
   .hero {
     padding: 50px 0;
@@ -384,5 +461,40 @@
 
   .cta-content h2 {
     font-size: 1.8rem;
+  }
+
+  .follow-us-section {
+    padding: 30px 0;
+  }
+
+  .follow-us-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .follow-us-content p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .social-buttons {
+    gap: 10px;
+    row-gap: 15px;
+  }
+
+  .social-btn {
+    padding: 14px 10px;
+    min-width: 90px;
+    font-size: 0.8rem;
+    border-radius: 12px;
+  }
+
+  .social-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social-btn:hover {
+    transform: translateY(-3px);
   }
 }

@@ -67,7 +67,7 @@
 }
 
 .story-card p {
-  color: var(--color-gray);
+  color: var(--color-light-gray);
   line-height: 1.7;
 }
 
@@ -168,7 +168,7 @@
 }
 
 .sustainability-text p {
-  color: var(--color-gray);
+  color: var(--color-light-gray);
   line-height: 1.8;
   margin-bottom: 30px;
 }
@@ -214,6 +214,63 @@
   font-size: 1.1rem;
 }
 
+.follow-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.follow-us-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--color-black);
+}
+
+.follow-us-content p {
+  color: var(--color-gray);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  color: var(--color-black);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.social-btn:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn svg {
+  color: var(--color-black);
+  transition: color 0.3s ease;
+}
+
+.social-btn:hover svg {
+  color: var(--color-black);
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .story-grid {
@@ -247,6 +304,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .social-buttons {
+    gap: 12px;
+  }
+
+  .social-btn {
+    padding: 16px 12px;
+    min-width: 100px;
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 576px) {
   .about-hero {
     padding: 60px 0;
@@ -263,5 +332,26 @@
 
   .about-cta h2 {
     font-size: 1.8rem;
+  }
+
+  .social-buttons {
+    gap: 10px;
+    row-gap: 15px;
+  }
+
+  .social-btn {
+    padding: 14px 10px;
+    min-width: 90px;
+    font-size: 0.8rem;
+    border-radius: 12px;
+  }
+
+  .social-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social-btn:hover {
+    transform: translateY(-3px);
   }
 }
