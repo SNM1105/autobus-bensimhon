@@ -1,40 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 import './Home.css'
-
-const faqData = [
-  {
-    question: "Where do you operate?",
-    answer: "We serve local Montreal routes and long-distance travel, including Québec and up-north destinations. Contact us to confirm availability for your specific route or trip."
-  },
-  {
-    question: "Do you offer transportation for field trips and special events?",
-    answer: "Absolutely! We provide transportation for field trips, sports events, business trips, family trips, and special events like Shabbatons for synagogues. Contact us to discuss your specific needs."
-  },
-  {
-    question: "How do I register my child for school bus transportation?",
-    answer: "For large schools, we work through school contracts and registration. For private services, families can contact us directly through our website, phone, or email to discuss registration and setup."
-  },
-  {
-    question: "How do I book a bus?",
-    answer: "You can book by contacting us through our website, email, or phone. Our team will guide you through availability, pricing, and scheduling to find the perfect solution for your needs."
-  },
-  {
-    question: "What are your operating hours?",
-    answer: "We operate 24/7 to serve all transportation needs. Whether it's school routes, business trips, or special events, we're constantly working to accommodate our clients."
-  },
-  {
-    question: "What safety measures are in place on your buses?",
-    answer: "Safety is at the core of everything we do. Our buses undergo daily inspections before every trip, are equipped with first aid kits and fire extinguishers, and have proper exit doors. Our drivers are professionally trained and follow strict safety protocols on every trip."
-  },
-  {
-    question: "What happens if my child misses the bus?",
-    answer: "If your child misses the bus, please contact our office immediately. Depending on the route, we may be able to pick them up at a later stop. Contact us to discuss your specific situation."
-  }
-]
 
 function Home() {
   const [openFaq, setOpenFaq] = useState(null)
+  const { t } = useLanguage()
+
+  const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7']
 
   return (
     <div className="home">
@@ -42,14 +15,11 @@ function Home() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <h1>Safe & Reliable <span>School Bus</span> Transportation</h1>
-            <p>
-              Trusted by Quebec families since 2008. We ensure every child arrives 
-              safely to school and back home, on time, every time.
-            </p>
+            <h1>{t('home.hero.title')} <span>{t('home.hero.titleHighlight')}</span> {t('home.hero.titleEnd')}</h1>
+            <p>{t('home.hero.description')}</p>
             <div className="hero-buttons">
-              <Link to="/contact" className="btn btn-primary">Get a Quote</Link>
-              <Link to="/services" className="btn btn-outline">Our Services</Link>
+              <Link to="/contact" className="btn btn-primary">{t('home.hero.getQuote')}</Link>
+              <Link to="/services" className="btn btn-outline">{t('home.hero.ourServices')}</Link>
             </div>
           </div>
           <div className="hero-image">
@@ -66,19 +36,19 @@ function Home() {
           <div className="stats-grid">
             <div className="stat-item">
               <span className="stat-number">17+</span>
-              <span className="stat-label">Years of Service</span>
+              <span className="stat-label">{t('home.stats.years')}</span>
             </div>
             <div className="stat-item">
               <span className="stat-number">24/7</span>
-              <span className="stat-label">Available Services</span>
+              <span className="stat-label">{t('home.stats.available')}</span>
             </div>
             <div className="stat-item">
               <span className="stat-number">Multi-City</span>
-              <span className="stat-label">Coverage Area</span>
+              <span className="stat-label">{t('home.stats.coverage')}</span>
             </div>
             <div className="stat-item">
               <span className="stat-number">100%</span>
-              <span className="stat-label">Safety Focused</span>
+              <span className="stat-label">{t('home.stats.safety')}</span>
             </div>
           </div>
         </div>
@@ -88,9 +58,9 @@ function Home() {
       <section className="section values">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Our Core Values</h2>
+            <h2 className="section-title">{t('home.values.title')}</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Everything we do is guided by our commitment to these fundamental principles
+              {t('home.values.subtitle')}
             </p>
           </div>
           <div className="values-grid">
@@ -101,8 +71,8 @@ function Home() {
                   <polyline points="9 12 11 14 15 10"></polyline>
                 </svg>
               </div>
-              <h3>Safety First</h3>
-              <p>The safety of every child is our top priority. Our drivers are trained professionals and our buses meet the highest safety standards.</p>
+              <h3>{t('home.values.safety.title')}</h3>
+              <p>{t('home.values.safety.description')}</p>
             </div>
             <div className="value-card">
               <div className="value-icon">
@@ -111,8 +81,8 @@ function Home() {
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
               </div>
-              <h3>Reliability</h3>
-              <p>Parents and schools trust us to be on time, every time. Our efficient route management ensures punctual service.</p>
+              <h3>{t('home.values.reliability.title')}</h3>
+              <p>{t('home.values.reliability.description')}</p>
             </div>
             <div className="value-card">
               <div className="value-icon">
@@ -120,8 +90,8 @@ function Home() {
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
               </div>
-              <h3>Loyalty</h3>
-              <p>We build lasting relationships with the communities we serve, standing by our partners through every challenge.</p>
+              <h3>{t('home.values.loyalty.title')}</h3>
+              <p>{t('home.values.loyalty.description')}</p>
             </div>
             <div className="value-card">
               <div className="value-icon">
@@ -132,8 +102,8 @@ function Home() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <h3>Community</h3>
-              <p>We're more than a bus company—we're part of your community, committed to making a positive impact on students' lives.</p>
+              <h3>{t('home.values.community.title')}</h3>
+              <p>{t('home.values.community.description')}</p>
             </div>
           </div>
         </div>
@@ -144,44 +114,41 @@ function Home() {
         <div className="container">
           <div className="services-content">
             <div className="services-text">
-              <h2 className="section-title">Transportation Solutions for Every Need</h2>
-              <p>
-                From daily school routes to special events and field trips, Autobus Bensimhon 
-                provides comprehensive transportation services tailored to your requirements.
-              </p>
+              <h2 className="section-title">{t('home.services.title')}</h2>
+              <p>{t('home.services.description')}</p>
               <ul className="services-list">
                 <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Regular School Routes
+                  {t('home.services.schoolRoutes')}
                 </li>
                 <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Charter & Private Services
+                  {t('home.services.charter')}
                 </li>
                 <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Field Trip Transportation
+                  {t('home.services.fieldTrips')}
                 </li>
                 <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  After-School Programs
+                  {t('home.services.afterSchool')}
                 </li>
                 <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Special Events & Sports Teams
+                  {t('home.services.specialEvents')}
                 </li>
               </ul>
-              <Link to="/services" className="btn btn-secondary">View All Services</Link>
+              <Link to="/services" className="btn btn-secondary">{t('home.services.viewAll')}</Link>
             </div>
             <div className="services-image">
               <div className="services-image-card">
@@ -190,9 +157,9 @@ function Home() {
                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
                     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
                   </svg>
-                  <span>Eco-Friendly Fleet</span>
+                  <span>{t('home.services.ecoBadge')}</span>
                 </div>
-                <p>Committed to sustainability with electric buses being added to our fleet</p>
+                <p>{t('home.services.ecoDescription')}</p>
               </div>
             </div>
           </div>
@@ -203,13 +170,13 @@ function Home() {
       <section className="section faq-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Frequently Asked Questions</h2>
+            <h2 className="section-title">{t('home.faq.title')}</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Find answers to common questions about our transportation services
+              {t('home.faq.subtitle')}
             </p>
           </div>
           <div className="faq-list">
-            {faqData.map((faq, index) => (
+            {faqKeys.map((key, index) => (
               <div 
                 key={index} 
                 className={`faq-item ${openFaq === index ? 'active' : ''}`}
@@ -218,7 +185,7 @@ function Home() {
                   className="faq-question"
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
-                  <span>{faq.question}</span>
+                  <span>{t(`home.faq.questions.${key}.question`)}</span>
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     width="24" 
@@ -235,7 +202,7 @@ function Home() {
                   </svg>
                 </button>
                 <div className="faq-answer">
-                  <p>{faq.answer}</p>
+                  <p>{t(`home.faq.questions.${key}.answer`)}</p>
                 </div>
               </div>
             ))}
@@ -247,8 +214,8 @@ function Home() {
       <section className="follow-us-section">
         <div className="container">
           <div className="follow-us-content text-center">
-            <h2>Follow Us on Social Media</h2>
-            <p>Stay updated with the latest news and updates from Autobus Bensimhon</p>
+            <h2>{t('home.followUs.title')}</h2>
+            <p>{t('home.followUs.description')}</p>
             <div className="social-buttons">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -277,9 +244,9 @@ function Home() {
       <section className="cta">
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Partner with Us?</h2>
-            <p>Contact us today to discuss your transportation needs and get a customized quote.</p>
-            <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>
+            <h2>{t('home.cta.title')}</h2>
+            <p>{t('home.cta.description')}</p>
+            <Link to="/contact" className="btn btn-primary">{t('home.cta.button')}</Link>
           </div>
         </div>
       </section>

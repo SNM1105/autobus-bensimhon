@@ -1,0 +1,322 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Safe & Reliable",
+      "titleHighlight": "School Bus",
+      "titleEnd": "Transportation",
+      "description": "Trusted by Quebec families since 2008. We ensure every child arrives safely to school and back home, on time, every time.",
+      "getQuote": "Get a Quote",
+      "ourServices": "Our Services"
+    },
+    "stats": {
+      "years": "Years of Service",
+      "available": "Available Services",
+      "coverage": "Coverage Area",
+      "safety": "Safety Focused"
+    },
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "Everything we do is guided by our commitment to these fundamental principles",
+      "safety": {
+        "title": "Safety First",
+        "description": "The safety of every child is our top priority. Our drivers are trained professionals and our buses meet the highest safety standards."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "Parents and schools trust us to be on time, every time. Our efficient route management ensures punctual service."
+      },
+      "loyalty": {
+        "title": "Loyalty",
+        "description": "We build lasting relationships with the communities we serve, standing by our partners through every challenge."
+      },
+      "community": {
+        "title": "Community",
+        "description": "We're more than a bus company—we're part of your community, committed to making a positive impact on students' lives."
+      }
+    },
+    "services": {
+      "title": "Transportation Solutions for Every Need",
+      "description": "From daily school routes to special events and field trips, Autobus Bensimhon provides comprehensive transportation services tailored to your requirements.",
+      "schoolRoutes": "Regular School Routes",
+      "charter": "Charter & Private Services",
+      "fieldTrips": "Field Trip Transportation",
+      "afterSchool": "After-School Programs",
+      "specialEvents": "Special Events & Sports Teams",
+      "viewAll": "View All Services",
+      "ecoBadge": "Eco-Friendly Fleet",
+      "ecoDescription": "Committed to sustainability with electric buses being added to our fleet"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our transportation services",
+      "questions": {
+        "q1": {
+          "question": "Where do you operate?",
+          "answer": "We serve local Montreal routes and long-distance travel, including Québec and up-north destinations. Contact us to confirm availability for your specific route or trip."
+        },
+        "q2": {
+          "question": "Do you offer transportation for field trips and special events?",
+          "answer": "Absolutely! We provide transportation for field trips, sports events, business trips, family trips, and special events like Shabbatons for synagogues. Contact us to discuss your specific needs."
+        },
+        "q3": {
+          "question": "How do I register my child for school bus transportation?",
+          "answer": "For large schools, we work through school contracts and registration. For private services, families can contact us directly through our website, phone, or email to discuss registration and setup."
+        },
+        "q4": {
+          "question": "How do I book a bus?",
+          "answer": "You can book by contacting us through our website, email, or phone. Our team will guide you through availability, pricing, and scheduling to find the perfect solution for your needs."
+        },
+        "q5": {
+          "question": "What are your operating hours?",
+          "answer": "We operate 24/7 to serve all transportation needs. Whether it's school routes, business trips, or special events, we're constantly working to accommodate our clients."
+        },
+        "q6": {
+          "question": "What safety measures are in place on your buses?",
+          "answer": "Safety is at the core of everything we do. Our buses undergo daily inspections before every trip, are equipped with first aid kits and fire extinguishers, and have proper exit doors. Our drivers are professionally trained and follow strict safety protocols on every trip."
+        },
+        "q7": {
+          "question": "What happens if my child misses the bus?",
+          "answer": "If your child misses the bus, please contact our office immediately. Depending on the route, we may be able to pick them up at a later stop. Contact us to discuss your specific situation."
+        }
+      }
+    },
+    "followUs": {
+      "title": "Follow Us on Social Media",
+      "description": "Stay updated with the latest news and updates from Autobus Bensimhon"
+    },
+    "cta": {
+      "title": "Ready to Partner with Us?",
+      "description": "Contact us today to discuss your transportation needs and get a customized quote.",
+      "button": "Contact Us Today"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Trusted school transportation in Quebec since 2008"
+    },
+    "story": {
+      "title": "Our Story",
+      "p1": "Founded almost two decades ago in 2008, Autobus Bensimhon has grown to become a trusted provider of safe and reliable transportation for students throughout Quebec.",
+      "p2": "Our company's primary goal has always been to ensure that every child arrives to and back from school, safely and on time. Over the years, we have built lasting relationships with schools, parents, and communities across the province.",
+      "p3": "Today, we operate a modern fleet of buses and continue to invest in the latest safety technology and eco-friendly vehicles to better serve our communities and protect our environment.",
+      "cardTitle": "Founded in Quebec",
+      "cardDescription": "Started with a vision to provide the safest school transportation services in the region."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide the safest, most reliable school bus transportation services while fostering trust with families and schools across Quebec.",
+      "visionTitle": "Our Vision",
+      "visionDescription": "To be recognized as Quebec's most trusted school transportation provider, known for our unwavering commitment to safety, sustainability, and community partnership."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "safety": {
+        "title": "Safety",
+        "description": "Every decision we make prioritizes the safety of the children in our care."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "We deliver consistent, dependable service that families and schools can count on."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We operate with honesty and transparency in all our business relationships."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We continuously strive to exceed expectations and improve our services."
+      }
+    },
+    "sustainability": {
+      "title": "Committed to Sustainability",
+      "description": "Autobus Bensimhon is committed to sustainability, slowly incorporating eco-friendly practices and working toward a greener future for school transportation.",
+      "features": {
+        "f1": "Gradual transition to eco-friendly vehicles",
+        "f2": "Route optimization to reduce emissions",
+        "f3": "Driver training for fuel-efficient driving"
+      }
+    },
+    "cta": {
+      "title": "Ready to Learn More?",
+      "description": "Contact us to discuss how we can serve your school or organization.",
+      "button": "Get in Touch"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive transportation solutions for schools, organizations, and families"
+    },
+    "list": {
+      "schoolRoutes": {
+        "title": "School Routes",
+        "description": "Daily transportation services for students to and from school, with safe pick-up and drop-off at designated stops.",
+        "features": {
+          "f1": "Morning and afternoon routes",
+          "f2": "GPS-tracked vehicles",
+          "f3": "Trained professional drivers",
+          "f4": "Consistent schedules"
+        }
+      },
+      "charter": {
+        "title": "Charter Services",
+        "description": "Private bus rentals for organizations, businesses, and groups needing reliable transportation.",
+        "features": {
+          "f1": "Flexible scheduling",
+          "f2": "Various bus sizes available",
+          "f3": "Professional drivers",
+          "f4": "Competitive pricing"
+        }
+      },
+      "fieldTrips": {
+        "title": "Field Trips",
+        "description": "Safe and fun transportation for school excursions, educational trips, and outdoor activities.",
+        "features": {
+          "f1": "Experienced drivers",
+          "f2": "Comfortable seating",
+          "f3": "Flexible pickup locations",
+          "f4": "On-time service"
+        }
+      },
+      "afterSchool": {
+        "title": "After-School Programs",
+        "description": "Transportation for students attending after-school activities, tutoring, and extracurricular programs.",
+        "features": {
+          "f1": "Multiple stop options",
+          "f2": "Coordinated scheduling",
+          "f3": "Safe drop-off points",
+          "f4": "Reliable service"
+        }
+      },
+      "specialEvents": {
+        "title": "Special Events",
+        "description": "Transportation for weddings, corporate events, religious gatherings, and other special occasions.",
+        "features": {
+          "f1": "Shabbatons & religious events",
+          "f2": "Corporate outings",
+          "f3": "Family gatherings",
+          "f4": "Custom routes"
+        }
+      },
+      "sports": {
+        "title": "Sports Teams",
+        "description": "Dedicated transportation for sports teams traveling to games, tournaments, and practices.",
+        "features": {
+          "f1": "Equipment storage space",
+          "f2": "Flexible departure times",
+          "f3": "Long-distance travel",
+          "f4": "Group accommodations"
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Autobus Bensimhon?",
+      "safety": {
+        "title": "Safety First",
+        "description": "Daily inspections, first aid kits, and trained drivers"
+      },
+      "available": {
+        "title": "24/7 Availability",
+        "description": "We operate around the clock for all your needs"
+      },
+      "coverage": {
+        "title": "Wide Coverage",
+        "description": "Montreal, Quebec, and up-north destinations"
+      },
+      "experience": {
+        "title": "17+ Years Experience",
+        "description": "Trusted by Quebec families since 2008"
+      }
+    },
+    "cta": {
+      "title": "Need Transportation Services?",
+      "description": "Contact us today to discuss your specific requirements and get a customized quote.",
+      "quote": "Request a Quote",
+      "call": "Call Us Now"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with us to discuss your transportation needs"
+    },
+    "info": {
+      "title": "Get In Touch",
+      "description": "We'd love to hear from you. Whether you're a school district, private institution, or parent looking for reliable transportation services, our team is here to help.",
+      "location": {
+        "title": "Our Location",
+        "address": "2340 Bedford, H3S 1E9, Montreal, Quebec, Canada"
+      },
+      "phone": {
+        "title": "Phone Number"
+      },
+      "email": {
+        "title": "Email Address"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "value": "24/7 - Always Available"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "your@email.com"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "(514) 000-0000"
+      },
+      "organization": {
+        "label": "School/Organization",
+        "placeholder": "Your school or organization name"
+      },
+      "serviceType": {
+        "label": "Service Type",
+        "placeholder": "Select a service",
+        "options": {
+          "schoolRoutes": "School Routes",
+          "charter": "Charter Services",
+          "fieldTrips": "Field Trip",
+          "afterSchool": "After-School Program",
+          "specialEvents": "Special Event",
+          "other": "Other"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your transportation needs..."
+      },
+      "submit": "Send Message",
+      "success": {
+        "title": "Message Sent!",
+        "description": "Thank you for contacting us. We'll get back to you within 24 hours.",
+        "button": "Send Another Message"
+      }
+    }
+  },
+  "footer": {
+    "description": "Providing safe and reliable school bus transportation services throughout Quebec since 2008.",
+    "quickLinks": "Quick Links",
+    "services": {
+      "school": "School Transportation",
+      "charter": "Charter Services",
+      "fieldTrips": "Field Trips",
+      "specialEvents": "Special Events"
+    },
+    "contactInfo": "Contact Info",
+    "rights": "All rights reserved."
+  }
+}

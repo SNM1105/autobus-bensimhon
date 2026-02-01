@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 import './Footer.css'
 
 function Footer() {
+  const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -19,7 +21,7 @@ function Footer() {
               </div>
             </div>
             <p className="footer-description">
-              Providing safe and reliable school bus transportation services throughout Quebec since 2008.
+              {t('footer.description')}
             </p>
             <div className="social-media">
               <a href="https://www.facebook.com/profile.php?id=61587147304878" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -41,27 +43,27 @@ function Footer() {
           </div>
 
           <div className="footer-section">
-            <h4>Quick Links</h4>
+            <h4>{t('footer.quickLinks')}</h4>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/">{t('nav.home')}</Link></li>
+              <li><Link to="/about">{t('nav.about')}</Link></li>
+              <li><Link to="/services">{t('nav.services')}</Link></li>
+              <li><Link to="/contact">{t('nav.contact')}</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h4>Services</h4>
+            <h4>{t('nav.services')}</h4>
             <ul>
-              <li>School Transportation</li>
-              <li>Charter Services</li>
-              <li>Field Trips</li>
-              <li>Special Events</li>
+              <li>{t('footer.services.school')}</li>
+              <li>{t('footer.services.charter')}</li>
+              <li>{t('footer.services.fieldTrips')}</li>
+              <li>{t('footer.services.specialEvents')}</li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h4>Contact Info</h4>
+            <h4>{t('footer.contactInfo')}</h4>
             <ul className="contact-info">
               <li>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -88,7 +90,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Autobus Bensimhon. All rights reserved.</p>
+          <p>&copy; {currentYear} Autobus Bensimhon. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,12 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { useLanguage } from '../context/LanguageContext'
+import { EMAILJS_CONFIG } from '../config/emailjs'
 import './Contact.css'
 
 function Contact() {
+  const { t } = useLanguage()
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,6 +16,8 @@ function Contact() {
     message: ''
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -20,28 +27,63 @@ function Contact() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // In a real application, you would send this data to a server
-    console.log('Form submitted:', formData)
-    setIsSubmitted(true)
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      organization: '',
-      serviceType: '',
-      message: ''
-    })
+    setIsLoading(true)
+    setError(null)
+    
+    try {
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'Not provided',
+        organization: formData.organization || 'Not provided',
+        service_type: formData.serviceType,
+        message: formData.message,
+        to_email: 'autobusbensimhon@gmail.com'
+      }
+
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      )
+
+      setIsSubmitted(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        organization: '',
+        serviceType: '',
+        message: ''
+      })
+    } catch (err) {
+      console.error('EmailJS Error:', err)
+      setError('Failed to send message. Please try again or contact us directly.')
+    } finally {
+      setIsLoading(false)
+    }
   }
+
+  const serviceOptions = [
+    { value: 'school-routes', key: 'schoolRoutes' },
+    { value: 'charter', key: 'charter' },
+    { value: 'field-trips', key: 'fieldTrips' },
+    { value: 'after-school', key: 'afterSchool' },
+    { value: 'special-events', key: 'specialEvents' },
+    { value: 'other', key: 'other' }
+  ]
 
   return (
     <div className="contact-page">
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">
-          <h1>Contact Us</h1>
-          <p>Get in touch with us to discuss your transportation needs</p>
+          <h1>{t('contact.hero.title')}</h1>
+          <p>{t('contact.hero.subtitle')}</p>
         </div>
       </section>
 
@@ -51,12 +93,8 @@ function Contact() {
           <div className="contact-grid">
             {/* Contact Information */}
             <div className="contact-info">
-              <h2>Get In Touch</h2>
-              <p>
-                We'd love to hear from you. Whether you're a school district, 
-                private institution, or parent looking for reliable transportation 
-                services, our team is here to help.
-              </p>
+              <h2>{t('contact.info.title')}</h2>
+              <p>{t('contact.info.description')}</p>
 
               <div className="info-cards">
                 <div className="info-card">
@@ -67,8 +105,8 @@ function Contact() {
                     </svg>
                   </div>
                   <div className="info-content">
-                    <h4>Our Location</h4>
-                    <p>2340 Bedford, H3S 1E9, Montreal, Quebec, Canada</p>
+                    <h4>{t('contact.info.location.title')}</h4>
+                    <p>{t('contact.info.location.address')}</p>
                   </div>
                 </div>
 
@@ -79,7 +117,7 @@ function Contact() {
                     </svg>
                   </div>
                   <div className="info-content">
-                    <h4>Phone Number</h4>
+                    <h4>{t('contact.info.phone.title')}</h4>
                     <p>(514) 983-9247</p>
                   </div>
                 </div>
@@ -92,7 +130,7 @@ function Contact() {
                     </svg>
                   </div>
                   <div className="info-content">
-                    <h4>Email Address</h4>
+                    <h4>{t('contact.info.email.title')}</h4>
                     <p>autobusbensimhon@gmail.com</p>
                   </div>
                 </div>
@@ -105,8 +143,8 @@ function Contact() {
                     </svg>
                   </div>
                   <div className="info-content">
-                    <h4>Office Hours</h4>
-                    <p>Mon - Fri: 7:00 AM - 6:00 PM</p>
+                    <h4>{t('contact.info.hours.title')}</h4>
+                    <p>{t('contact.info.hours.value')}</p>
                   </div>
                 </div>
               </div>
@@ -114,6 +152,18 @@ function Contact() {
 
             {/* Contact Form */}
             <div className="contact-form-wrapper">
+              {error && (
+                <div className="error-message" style={{
+                  padding: '15px',
+                  marginBottom: '20px',
+                  backgroundColor: '#fee',
+                  border: '1px solid #fcc',
+                  borderRadius: '8px',
+                  color: '#c33'
+                }}>
+                  {error}
+                </div>
+              )}
               {isSubmitted ? (
                 <div className="success-message">
                   <div className="success-icon">
@@ -122,22 +172,25 @@ function Contact() {
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
                   </div>
-                  <h3>Thank You!</h3>
-                  <p>Your message has been sent successfully. We'll get back to you as soon as possible.</p>
+                  <h3>{t('contact.form.success.title')}</h3>
+                  <p>{t('contact.form.success.message')}</p>
                   <button 
                     className="btn btn-primary"
-                    onClick={() => setIsSubmitted(false)}
+                    onClick={() => {
+                      setIsSubmitted(false)
+                      setError(null)
+                    }}
                   >
-                    Send Another Message
+                    {t('contact.form.success.button')}
                   </button>
                 </div>
               ) : (
                 <form className="contact-form" onSubmit={handleSubmit}>
-                  <h2>Send Us a Message</h2>
+                  <h2>{t('contact.form.title')}</h2>
                   
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="name">Full Name *</label>
+                      <label htmlFor="name">{t('contact.form.name.label')} *</label>
                       <input
                         type="text"
                         id="name"
@@ -145,11 +198,11 @@ function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        placeholder="John Doe"
+                        placeholder={t('contact.form.name.placeholder')}
                       />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="email">Email Address *</label>
+                      <label htmlFor="email">{t('contact.form.email.label')} *</label>
                       <input
                         type="email"
                         id="email"
@@ -157,38 +210,38 @@ function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="john@example.com"
+                        placeholder={t('contact.form.email.placeholder')}
                       />
                     </div>
                   </div>
 
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="phone">Phone Number</label>
+                      <label htmlFor="phone">{t('contact.form.phone.label')}</label>
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="(514) 555-0123"
+                        placeholder={t('contact.form.phone.placeholder')}
                       />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="organization">Organization</label>
+                      <label htmlFor="organization">{t('contact.form.organization.label')}</label>
                       <input
                         type="text"
                         id="organization"
                         name="organization"
                         value={formData.organization}
                         onChange={handleChange}
-                        placeholder="School or Institution Name"
+                        placeholder={t('contact.form.organization.placeholder')}
                       />
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="serviceType">Service Type *</label>
+                    <label htmlFor="serviceType">{t('contact.form.serviceType.label')} *</label>
                     <select
                       id="serviceType"
                       name="serviceType"
@@ -196,18 +249,17 @@ function Contact() {
                       onChange={handleChange}
                       required
                     >
-                      <option value="">Select a service</option>
-                      <option value="school-routes">Regular School Routes</option>
-                      <option value="charter">Charter Services</option>
-                      <option value="field-trips">Field Trip Transportation</option>
-                      <option value="after-school">After-School Programs</option>
-                      <option value="special-events">Special Events</option>
-                      <option value="other">Other</option>
+                      <option value="">{t('contact.form.serviceType.placeholder')}</option>
+                      {serviceOptions.map(option => (
+                        <option key={option.value} value={option.value}>
+                          {t(`contact.form.serviceType.options.${option.key}`)}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="message">Message *</label>
+                    <label htmlFor="message">{t('contact.form.message.label')} *</label>
                     <textarea
                       id="message"
                       name="message"
@@ -215,12 +267,12 @@ function Contact() {
                       onChange={handleChange}
                       required
                       rows="5"
-                      placeholder="Tell us about your transportation needs..."
+                      placeholder={t('contact.form.message.placeholder')}
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="btn btn-primary btn-submit">
-                    Send Message
+                  <button type="submit" className="btn btn-primary btn-submit" disabled={isLoading}>
+                    {isLoading ? t('contact.form.sending') || 'Sending...' : t('contact.form.submit')}
                   </button>
                 </form>
               )}

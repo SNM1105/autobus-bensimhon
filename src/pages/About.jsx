@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 import './About.css'
 
 function About() {
+  const { t } = useLanguage()
+
   return (
     <div className="about-page">
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">
-          <h1>About Us</h1>
-          <p>Trusted school transportation in Quebec since 2008</p>
+          <h1>{t('about.hero.title')}</h1>
+          <p>{t('about.hero.subtitle')}</p>
         </div>
       </section>
 
@@ -17,29 +20,16 @@ function About() {
         <div className="container">
           <div className="story-grid">
             <div className="story-content">
-              <h2>Our Story</h2>
-              <p>
-                Founded almost two decades ago in 2008, Autobus Bensimhon has grown 
-                to become a trusted provider of safe and reliable transportation for 
-                students throughout Quebec.
-              </p>
-              <p>
-                Our company's primary goal has always been to ensure that every child 
-                arrives to and back from school, safely and on time. Over the years, 
-                we have built lasting relationships with schools, parents, and communities 
-                across the province.
-              </p>
-              <p>
-                Today, we operate a modern fleet of buses and continue to invest in 
-                the latest safety technology and eco-friendly vehicles to better serve 
-                our communities and protect our environment.
-              </p>
+              <h2>{t('about.story.title')}</h2>
+              <p>{t('about.story.p1')}</p>
+              <p>{t('about.story.p2')}</p>
+              <p>{t('about.story.p3')}</p>
             </div>
             <div className="story-image">
               <div className="story-card">
                 <div className="year-badge">2008</div>
-                <h3>Founded in Quebec</h3>
-                <p>Started with a vision to provide the safest school transportation services in the region.</p>
+                <h3>{t('about.story.cardTitle')}</h3>
+                <p>{t('about.story.cardDescription')}</p>
               </div>
             </div>
           </div>
@@ -58,11 +48,8 @@ function About() {
                   <circle cx="12" cy="12" r="2"></circle>
                 </svg>
               </div>
-              <h3>Our Mission</h3>
-              <p>
-                To provide safe, reliable, and efficient transportation services that 
-                give parents peace of mind and help students arrive at school ready to learn.
-              </p>
+              <h3>{t('about.mission.title')}</h3>
+              <p>{t('about.mission.description')}</p>
             </div>
             <div className="mv-card">
               <div className="mv-icon">
@@ -71,11 +58,8 @@ function About() {
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </div>
-              <h3>Our Vision</h3>
-              <p>
-                To be Quebec's most trusted school transportation provider, known for 
-                our commitment to safety, sustainability, and community partnership.
-              </p>
+              <h3>{t('about.mission.visionTitle')}</h3>
+              <p>{t('about.mission.visionDescription')}</p>
             </div>
           </div>
         </div>
@@ -85,50 +69,35 @@ function About() {
       <section className="section core-values">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Our Core Values</h2>
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              These values guide everything we do at Autobus Bensimhon
-            </p>
+            <h2 className="section-title">{t('about.values.title')}</h2>
           </div>
           <div className="values-grid">
             <div className="value-item">
               <div className="value-number">01</div>
               <div className="value-content">
-                <h3>Safety</h3>
-                <p>
-                  The safety of every child is our top priority. Our drivers undergo 
-                  rigorous training, and our buses are maintained to the highest standards.
-                </p>
+                <h3>{t('about.values.safety.title')}</h3>
+                <p>{t('about.values.safety.description')}</p>
               </div>
             </div>
             <div className="value-item">
               <div className="value-number">02</div>
               <div className="value-content">
-                <h3>Reliability</h3>
-                <p>
-                  Parents and schools trust us to be on time, every time. Our efficient 
-                  route management ensures punctual and dependable service.
-                </p>
+                <h3>{t('about.values.reliability.title')}</h3>
+                <p>{t('about.values.reliability.description')}</p>
               </div>
             </div>
             <div className="value-item">
               <div className="value-number">03</div>
               <div className="value-content">
-                <h3>Loyalty</h3>
-                <p>
-                  We build lasting relationships with the communities we serve, standing 
-                  by our partners through every challenge and milestone.
-                </p>
+                <h3>{t('about.values.integrity.title')}</h3>
+                <p>{t('about.values.integrity.description')}</p>
               </div>
             </div>
             <div className="value-item">
               <div className="value-number">04</div>
               <div className="value-content">
-                <h3>Community</h3>
-                <p>
-                  We're more than a bus company—we're part of your community, committed 
-                  to making a positive impact on students' lives and the environment.
-                </p>
+                <h3>{t('about.values.excellence.title')}</h3>
+                <p>{t('about.values.excellence.description')}</p>
               </div>
             </div>
           </div>
@@ -140,31 +109,26 @@ function About() {
         <div className="container">
           <div className="sustainability-content">
             <div className="sustainability-text">
-              <h2>Committed to Sustainability</h2>
-              <p>
-                Autobus Bensimhon is committed to sustainability, slowly incorporating 
-                electric buses into our fleet of buses to reduce emissions. We believe 
-                in protecting the environment for future generations—the very children 
-                we transport every day.
-              </p>
+              <h2>{t('about.sustainability.title')}</h2>
+              <p>{t('about.sustainability.description')}</p>
               <div className="eco-features">
                 <div className="eco-feature">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FAD124" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span>Electric buses in our fleet</span>
+                  <span>{t('about.sustainability.features.f1')}</span>
                 </div>
                 <div className="eco-feature">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FAD124" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span>Reduced carbon emissions</span>
+                  <span>{t('about.sustainability.features.f2')}</span>
                 </div>
                 <div className="eco-feature">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FAD124" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span>Eco-friendly practices</span>
+                  <span>{t('about.sustainability.features.f3')}</span>
                 </div>
               </div>
             </div>
@@ -181,12 +145,12 @@ function About() {
       {/* CTA */}
       <section className="about-cta">
         <div className="container">
-          <h2>Ready to Learn More?</h2>
-          <p>Contact us today to discuss how we can serve your transportation needs.</p>
-          <Link to="/contact" className="btn btn-primary">Get in Touch</Link>
+          <h2>{t('about.cta.title')}</h2>
+          <p>{t('about.cta.description')}</p>
+          <Link to="/contact" className="btn btn-primary">{t('about.cta.button')}</Link>
           
           <div className="follow-us-content" style={{ marginTop: '50px' }}>
-            <p style={{ marginBottom: '20px', fontSize: '1rem' }}>Follow us on social media</p>
+            <p style={{ marginBottom: '20px', fontSize: '1rem' }}>{t('home.followUs.title')}</p>
             <div className="social-buttons">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

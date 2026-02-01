@@ -1,0 +1,322 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Transport scolaire",
+      "titleHighlight": "sécuritaire",
+      "titleEnd": "et fiable",
+      "description": "La confiance des familles québécoises depuis 2008. Nous assurons que chaque enfant arrive à l'école et rentre à la maison en toute sécurité, à l'heure, chaque jour.",
+      "getQuote": "Obtenir un devis",
+      "ourServices": "Nos services"
+    },
+    "stats": {
+      "years": "Années de service",
+      "available": "Services disponibles",
+      "coverage": "Zone de couverture",
+      "safety": "Axé sur la sécurité"
+    },
+    "values": {
+      "title": "Nos valeurs fondamentales",
+      "subtitle": "Tout ce que nous faisons est guidé par notre engagement envers ces principes fondamentaux",
+      "safety": {
+        "title": "Sécurité avant tout",
+        "description": "La sécurité de chaque enfant est notre priorité absolue. Nos chauffeurs sont des professionnels formés et nos autobus répondent aux normes de sécurité les plus élevées."
+      },
+      "reliability": {
+        "title": "Fiabilité",
+        "description": "Les parents et les écoles nous font confiance pour être à l'heure, chaque fois. Notre gestion efficace des itinéraires assure un service ponctuel."
+      },
+      "loyalty": {
+        "title": "Loyauté",
+        "description": "Nous bâtissons des relations durables avec les communautés que nous servons, en soutenant nos partenaires à travers chaque défi."
+      },
+      "community": {
+        "title": "Communauté",
+        "description": "Nous sommes plus qu'une entreprise d'autobus — nous faisons partie de votre communauté, engagés à avoir un impact positif sur la vie des élèves."
+      }
+    },
+    "services": {
+      "title": "Solutions de transport pour tous vos besoins",
+      "description": "Des trajets scolaires quotidiens aux événements spéciaux et sorties éducatives, Autobus Bensimhon offre des services de transport complets adaptés à vos besoins.",
+      "schoolRoutes": "Trajets scolaires réguliers",
+      "charter": "Services de nolisement",
+      "fieldTrips": "Transport pour sorties",
+      "afterSchool": "Programmes parascolaires",
+      "specialEvents": "Événements spéciaux et équipes sportives",
+      "viewAll": "Voir tous les services",
+      "ecoBadge": "Flotte écologique",
+      "ecoDescription": "Engagés envers la durabilité avec l'ajout d'autobus électriques à notre flotte"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "subtitle": "Trouvez des réponses aux questions courantes sur nos services de transport",
+      "questions": {
+        "q1": {
+          "question": "Où opérez-vous?",
+          "answer": "Nous desservons les trajets locaux de Montréal et les voyages longue distance, incluant Québec et les destinations du nord. Contactez-nous pour confirmer la disponibilité pour votre trajet ou voyage spécifique."
+        },
+        "q2": {
+          "question": "Offrez-vous le transport pour les sorties et événements spéciaux?",
+          "answer": "Absolument! Nous offrons le transport pour les sorties éducatives, événements sportifs, voyages d'affaires, voyages familiaux et événements spéciaux comme les Shabbatons pour les synagogues. Contactez-nous pour discuter de vos besoins spécifiques."
+        },
+        "q3": {
+          "question": "Comment inscrire mon enfant au transport scolaire?",
+          "answer": "Pour les grandes écoles, nous travaillons par contrats scolaires et inscription. Pour les services privés, les familles peuvent nous contacter directement via notre site web, téléphone ou courriel pour discuter de l'inscription et de la configuration."
+        },
+        "q4": {
+          "question": "Comment réserver un autobus?",
+          "answer": "Vous pouvez réserver en nous contactant via notre site web, courriel ou téléphone. Notre équipe vous guidera concernant la disponibilité, les prix et la planification pour trouver la solution parfaite pour vos besoins."
+        },
+        "q5": {
+          "question": "Quelles sont vos heures d'opération?",
+          "answer": "Nous opérons 24/7 pour répondre à tous les besoins de transport. Que ce soit pour les trajets scolaires, voyages d'affaires ou événements spéciaux, nous travaillons constamment pour accommoder nos clients."
+        },
+        "q6": {
+          "question": "Quelles mesures de sécurité sont en place sur vos autobus?",
+          "answer": "La sécurité est au cœur de tout ce que nous faisons. Nos autobus subissent des inspections quotidiennes avant chaque trajet, sont équipés de trousses de premiers soins et d'extincteurs, et ont des sorties de secours appropriées. Nos chauffeurs sont formés professionnellement et suivent des protocoles de sécurité stricts à chaque trajet."
+        },
+        "q7": {
+          "question": "Que se passe-t-il si mon enfant manque l'autobus?",
+          "answer": "Si votre enfant manque l'autobus, veuillez contacter notre bureau immédiatement. Selon l'itinéraire, nous pourrons peut-être le récupérer à un arrêt ultérieur. Contactez-nous pour discuter de votre situation spécifique."
+        }
+      }
+    },
+    "followUs": {
+      "title": "Suivez-nous sur les réseaux sociaux",
+      "description": "Restez informé des dernières nouvelles et mises à jour d'Autobus Bensimhon"
+    },
+    "cta": {
+      "title": "Prêt à devenir partenaire?",
+      "description": "Contactez-nous aujourd'hui pour discuter de vos besoins de transport et obtenir un devis personnalisé.",
+      "button": "Contactez-nous aujourd'hui"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "À propos de nous",
+      "subtitle": "Transport scolaire de confiance au Québec depuis 2008"
+    },
+    "story": {
+      "title": "Notre histoire",
+      "p1": "Fondée il y a près de deux décennies en 2008, Autobus Bensimhon est devenue un fournisseur de confiance de transport sécuritaire et fiable pour les élèves à travers le Québec.",
+      "p2": "L'objectif principal de notre entreprise a toujours été de s'assurer que chaque enfant arrive à l'école et en revienne en toute sécurité et à l'heure. Au fil des ans, nous avons bâti des relations durables avec les écoles, les parents et les communautés à travers la province.",
+      "p3": "Aujourd'hui, nous exploitons une flotte moderne d'autobus et continuons d'investir dans les dernières technologies de sécurité et les véhicules écologiques pour mieux servir nos communautés et protéger notre environnement.",
+      "cardTitle": "Fondée au Québec",
+      "cardDescription": "Démarrée avec la vision de fournir les services de transport scolaire les plus sécuritaires de la région."
+    },
+    "mission": {
+      "title": "Notre mission",
+      "description": "Fournir les services de transport scolaire les plus sécuritaires et fiables tout en cultivant la confiance avec les familles et les écoles à travers le Québec.",
+      "visionTitle": "Notre vision",
+      "visionDescription": "Être reconnu comme le fournisseur de transport scolaire le plus fiable du Québec, connu pour notre engagement inébranlable envers la sécurité, la durabilité et le partenariat communautaire."
+    },
+    "values": {
+      "title": "Nos valeurs fondamentales",
+      "safety": {
+        "title": "Sécurité",
+        "description": "Chaque décision que nous prenons priorise la sécurité des enfants dont nous avons la charge."
+      },
+      "reliability": {
+        "title": "Fiabilité",
+        "description": "Nous offrons un service constant et fiable sur lequel les familles et les écoles peuvent compter."
+      },
+      "integrity": {
+        "title": "Intégrité",
+        "description": "Nous opérons avec honnêteté et transparence dans toutes nos relations d'affaires."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous nous efforçons continuellement de dépasser les attentes et d'améliorer nos services."
+      }
+    },
+    "sustainability": {
+      "title": "Engagés envers la durabilité",
+      "description": "Autobus Bensimhon est engagé envers la durabilité, incorporant progressivement des pratiques écologiques et travaillant vers un avenir plus vert pour le transport scolaire.",
+      "features": {
+        "f1": "Transition graduelle vers des véhicules écologiques",
+        "f2": "Optimisation des itinéraires pour réduire les émissions",
+        "f3": "Formation des chauffeurs pour une conduite économe en carburant"
+      }
+    },
+    "cta": {
+      "title": "Prêt à en savoir plus?",
+      "description": "Contactez-nous pour discuter de comment nous pouvons servir votre école ou organisation.",
+      "button": "Nous contacter"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Nos services",
+      "subtitle": "Solutions de transport complètes pour les écoles, organisations et familles"
+    },
+    "list": {
+      "schoolRoutes": {
+        "title": "Trajets scolaires",
+        "description": "Services de transport quotidien pour les élèves vers et depuis l'école, avec embarquement et débarquement sécuritaires aux arrêts désignés.",
+        "features": {
+          "f1": "Trajets matin et après-midi",
+          "f2": "Véhicules suivis par GPS",
+          "f3": "Chauffeurs professionnels formés",
+          "f4": "Horaires constants"
+        }
+      },
+      "charter": {
+        "title": "Services de nolisement",
+        "description": "Location d'autobus privés pour les organisations, entreprises et groupes ayant besoin d'un transport fiable.",
+        "features": {
+          "f1": "Horaires flexibles",
+          "f2": "Diverses tailles d'autobus disponibles",
+          "f3": "Chauffeurs professionnels",
+          "f4": "Prix compétitifs"
+        }
+      },
+      "fieldTrips": {
+        "title": "Sorties éducatives",
+        "description": "Transport sécuritaire et agréable pour les excursions scolaires, voyages éducatifs et activités extérieures.",
+        "features": {
+          "f1": "Chauffeurs expérimentés",
+          "f2": "Sièges confortables",
+          "f3": "Lieux de ramassage flexibles",
+          "f4": "Service ponctuel"
+        }
+      },
+      "afterSchool": {
+        "title": "Programmes parascolaires",
+        "description": "Transport pour les élèves participant aux activités parascolaires, tutorat et programmes extrascolaires.",
+        "features": {
+          "f1": "Options d'arrêts multiples",
+          "f2": "Horaires coordonnés",
+          "f3": "Points de débarquement sécuritaires",
+          "f4": "Service fiable"
+        }
+      },
+      "specialEvents": {
+        "title": "Événements spéciaux",
+        "description": "Transport pour mariages, événements corporatifs, rassemblements religieux et autres occasions spéciales.",
+        "features": {
+          "f1": "Shabbatons et événements religieux",
+          "f2": "Sorties corporatives",
+          "f3": "Réunions familiales",
+          "f4": "Itinéraires personnalisés"
+        }
+      },
+      "sports": {
+        "title": "Équipes sportives",
+        "description": "Transport dédié pour les équipes sportives se rendant aux matchs, tournois et pratiques.",
+        "features": {
+          "f1": "Espace de rangement pour équipement",
+          "f2": "Heures de départ flexibles",
+          "f3": "Voyages longue distance",
+          "f4": "Accommodations de groupe"
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir Autobus Bensimhon?",
+      "safety": {
+        "title": "Sécurité avant tout",
+        "description": "Inspections quotidiennes, trousses de premiers soins et chauffeurs formés"
+      },
+      "available": {
+        "title": "Disponibilité 24/7",
+        "description": "Nous opérons jour et nuit pour tous vos besoins"
+      },
+      "coverage": {
+        "title": "Large couverture",
+        "description": "Montréal, Québec et destinations du nord"
+      },
+      "experience": {
+        "title": "17+ ans d'expérience",
+        "description": "La confiance des familles québécoises depuis 2008"
+      }
+    },
+    "cta": {
+      "title": "Besoin de services de transport?",
+      "description": "Contactez-nous aujourd'hui pour discuter de vos besoins spécifiques et obtenir un devis personnalisé.",
+      "quote": "Demander un devis",
+      "call": "Appelez-nous maintenant"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contactez-nous",
+      "subtitle": "Communiquez avec nous pour discuter de vos besoins de transport"
+    },
+    "info": {
+      "title": "Nous joindre",
+      "description": "Nous aimerions avoir de vos nouvelles. Que vous soyez une commission scolaire, une institution privée ou un parent à la recherche de services de transport fiables, notre équipe est là pour vous aider.",
+      "location": {
+        "title": "Notre adresse",
+        "address": "2340 Bedford, H3S 1E9, Montréal, Québec, Canada"
+      },
+      "phone": {
+        "title": "Téléphone"
+      },
+      "email": {
+        "title": "Courriel"
+      },
+      "hours": {
+        "title": "Heures d'ouverture",
+        "value": "24/7 - Toujours disponible"
+      }
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": {
+        "label": "Nom complet",
+        "placeholder": "Votre nom"
+      },
+      "email": {
+        "label": "Adresse courriel",
+        "placeholder": "votre@courriel.com"
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "(514) 000-0000"
+      },
+      "organization": {
+        "label": "École/Organisation",
+        "placeholder": "Nom de votre école ou organisation"
+      },
+      "serviceType": {
+        "label": "Type de service",
+        "placeholder": "Sélectionnez un service",
+        "options": {
+          "schoolRoutes": "Trajets scolaires",
+          "charter": "Services de nolisement",
+          "fieldTrips": "Sortie éducative",
+          "afterSchool": "Programme parascolaire",
+          "specialEvents": "Événement spécial",
+          "other": "Autre"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Parlez-nous de vos besoins de transport..."
+      },
+      "submit": "Envoyer le message",
+      "success": {
+        "title": "Message envoyé!",
+        "description": "Merci de nous avoir contactés. Nous vous répondrons dans les 24 heures.",
+        "button": "Envoyer un autre message"
+      }
+    }
+  },
+  "footer": {
+    "description": "Fournissant des services de transport scolaire sécuritaires et fiables à travers le Québec depuis 2008.",
+    "quickLinks": "Liens rapides",
+    "services": {
+      "school": "Transport scolaire",
+      "charter": "Services de nolisement",
+      "fieldTrips": "Sorties éducatives",
+      "specialEvents": "Événements spéciaux"
+    },
+    "contactInfo": "Coordonnées",
+    "rights": "Tous droits réservés."
+  }
+}

@@ -1,9 +1,11 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import './Header.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { language, toggleLanguage, t } = useLanguage()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -39,17 +41,24 @@ function Header() {
 
           <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
             <NavLink to="/" className="nav-link" onClick={closeMenu}>
-              Home
+              {t('nav.home')}
             </NavLink>
             <NavLink to="/about" className="nav-link" onClick={closeMenu}>
-              About
+              {t('nav.about')}
             </NavLink>
             <NavLink to="/services" className="nav-link" onClick={closeMenu}>
-              Services
+              {t('nav.services')}
             </NavLink>
             <NavLink to="/contact" className="nav-link nav-link-cta" onClick={closeMenu}>
-              Contact Us
+              {t('nav.contact')}
             </NavLink>
+            <button 
+              className="language-toggle"
+              onClick={toggleLanguage}
+              aria-label="Toggle language"
+            >
+              {language === 'en' ? 'FR' : 'EN'}
+            </button>
           </nav>
         </div>
       </div>

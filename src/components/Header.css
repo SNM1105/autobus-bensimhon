@@ -78,6 +78,24 @@
   background-color: var(--color-primary);
 }
 
+.language-toggle {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-black);
+  background-color: transparent;
+  border: 2px solid var(--color-black);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.language-toggle:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -138,5 +156,12 @@
     width: 100%;
     text-align: center;
     padding: 15px 20px;
+  }
+
+  .language-toggle {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px 20px;
   }
 }
