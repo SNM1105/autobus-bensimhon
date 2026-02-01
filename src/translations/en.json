@@ -300,9 +300,10 @@
         "placeholder": "Tell us about your transportation needs..."
       },
       "submit": "Send Message",
+      "sending": "Sending...",
       "success": {
         "title": "Message Sent!",
-        "description": "Thank you for contacting us. We'll get back to you within 24 hours.",
+        "message": "Thank you for contacting us. We'll get back to you within 24 hours.",
         "button": "Send Another Message"
       }
     }

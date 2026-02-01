@@ -300,9 +300,10 @@
         "placeholder": "Parlez-nous de vos besoins de transport..."
       },
       "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
       "success": {
         "title": "Message envoyé!",
-        "description": "Merci de nous avoir contactés. Nous vous répondrons dans les 24 heures.",
+        "message": "Merci de nous avoir contactés. Nous vous répondrons dans les 24 heures.",
         "button": "Envoyer un autre message"
       }
     }

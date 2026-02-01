@@ -23,9 +23,7 @@ function Home() {
             </div>
           </div>
           <div className="hero-image">
-            <div className="hero-image">
-              <img src="/autobus-bensimhon-type.png" alt="School Bus Transportation" />
-            </div>
+            <img src="/autobus-bensimhon-type.png" alt="School Bus Transportation" />
           </div>
         </div>
       </section>
