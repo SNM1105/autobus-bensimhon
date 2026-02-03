@@ -10,7 +10,7 @@
       "title": "Transport scolaire",
       "titleHighlight": "sécuritaire",
       "titleEnd": "et fiable",
-      "description": "La confiance des familles québécoises depuis 2008. Nous assurons que chaque enfant arrive à l'école et rentre à la maison en toute sécurité, à l'heure, chaque jour.",
+      "description": "La confiance des familles québécoises depuis 2007. Nous assurons que chaque enfant arrive à l'école et rentre à la maison en toute sécurité, à l'heure, chaque jour.",
       "getQuote": "Obtenir un devis",
       "ourServices": "Nos services"
     },
@@ -49,8 +49,8 @@
       "afterSchool": "Programmes parascolaires",
       "specialEvents": "Événements spéciaux et équipes sportives",
       "viewAll": "Voir tous les services",
-      "ecoBadge": "Flotte écologique",
-      "ecoDescription": "Engagés envers la durabilité avec l'ajout d'autobus électriques à notre flotte"
+      "ecoBadge": "Sûr et fiable",
+      "ecoDescription": "Engagés envers la sécurité et la fiabilité avec des autobus bien entretenus"
     },
     "faq": {
       "title": "Questions fréquentes",
@@ -99,11 +99,11 @@
   "about": {
     "hero": {
       "title": "À propos de nous",
-      "subtitle": "Transport scolaire de confiance au Québec depuis 2008"
+      "subtitle": "Transport scolaire de confiance au Québec depuis 2007"
     },
     "story": {
       "title": "Notre histoire",
-      "p1": "Fondée il y a près de deux décennies en 2008, Autobus Bensimhon est devenue un fournisseur de confiance de transport sécuritaire et fiable pour les élèves à travers le Québec.",
+      "p1": "Fondée il y a près de deux décennies en 2007, Autobus Bensimhon est devenue un fournisseur de confiance de transport sécuritaire et fiable pour les élèves à travers le Québec.",
       "p2": "L'objectif principal de notre entreprise a toujours été de s'assurer que chaque enfant arrive à l'école et en revienne en toute sécurité et à l'heure. Au fil des ans, nous avons bâti des relations durables avec les écoles, les parents et les communautés à travers la province.",
       "p3": "Aujourd'hui, nous exploitons une flotte moderne d'autobus et continuons d'investir dans les dernières technologies de sécurité et les véhicules écologiques pour mieux servir nos communautés et protéger notre environnement.",
       "cardTitle": "Fondée au Québec",
@@ -231,8 +231,8 @@
         "description": "Montréal, Québec et destinations du nord"
       },
       "experience": {
-        "title": "17+ ans d'expérience",
-        "description": "La confiance des familles québécoises depuis 2008"
+        "title": "18+ ans d'expérience",
+        "description": "La confiance des familles québécoises depuis 2007"
       }
     },
     "cta": {
@@ -251,8 +251,8 @@
       "title": "Nous joindre",
       "description": "Nous aimerions avoir de vos nouvelles. Que vous soyez une commission scolaire, une institution privée ou un parent à la recherche de services de transport fiables, notre équipe est là pour vous aider.",
       "location": {
-        "title": "Notre adresse",
-        "address": "2340 Bedford, H3S 1E9, Montréal, Québec, Canada"
+        "title": "Notre emplacement",
+        "address": "Montréal, Québec, Canada"
       },
       "phone": {
         "title": "Téléphone"
@@ -299,6 +299,21 @@
         "label": "Message",
         "placeholder": "Parlez-nous de vos besoins de transport..."
       },
+      "booking": {
+        "title": "Détails de réservation",
+        "date": {
+          "label": "Date préférée"
+        },
+        "time": {
+          "label": "Heure préférée"
+        },
+        "buses": {
+          "label": "# d'autobus",
+          "singular": "Autobus",
+          "plural": "Autobus",
+          "moreThan10": "Plus de 10"
+        }
+      },
       "submit": "Envoyer le message",
       "sending": "Envoi en cours...",
       "success": {
@@ -309,7 +324,7 @@
     }
   },
   "footer": {
-    "description": "Fournissant des services de transport scolaire sécuritaires et fiables à travers le Québec depuis 2008.",
+    "description": "Fournissant des services de transport scolaire sécuritaires et fiables à travers le Québec depuis 2007.",
     "quickLinks": "Liens rapides",
     "services": {
       "school": "Transport scolaire",

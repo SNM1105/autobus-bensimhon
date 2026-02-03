@@ -111,6 +111,10 @@
   gap: 20px;
 }
 
+.form-row-three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -198,6 +202,45 @@
 
 .success-message p {
   color: var(--color-gray);
+}
+
+/* Booking Section */
+.booking-section {
+  background-color: #fffef5;
+  border: 2px solid #f0e5a1;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.booking-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 20px;
+}
+
+.booking-title svg {
+  color: var(--color-primary);
+}
+
+.form-row-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.booking-section .form-group {
+  margin-bottom: 0;
+}
+
+.booking-section input[type="date"],
+.booking-section input[type="time"] {
+  cursor: pointer;
 }
 
 /* FAQ Section */
@@ -307,6 +350,19 @@
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .form-row-three {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .booking-section .form-group {
+    margin-bottom: 15px;
+  }
+
+  .booking-section .form-group:last-child {
+    margin-bottom: 0;
   }
 
   .info-card {

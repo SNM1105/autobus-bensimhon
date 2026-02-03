@@ -1,9 +1,13 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import './About.css'
 
 function About() {
+  const [openFaq, setOpenFaq] = useState(null)
   const { t } = useLanguage()
+
+  const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7']
 
   return (
     <div className="about-page">
@@ -30,7 +34,7 @@ function About() {
                 <div className="story-card-inner">
                   <div className="year-badge">
                     <span className="year-label">EST.</span>
-                    <span className="year-number">2008</span>
+                    <span className="year-number">2007</span>
                   </div>
                   <div className="location-badge">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -120,40 +124,46 @@ function About() {
         </div>
       </section>
 
-      {/* Sustainability */}
-      <section className="section sustainability bg-dark">
+      {/* FAQ Section */}
+      <section className="section faq-section">
         <div className="container">
-          <div className="sustainability-content">
-            <div className="sustainability-text">
-              <h2>{t('about.sustainability.title')}</h2>
-              <p>{t('about.sustainability.description')}</p>
-              <div className="eco-features">
-                <div className="eco-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FAD124" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
+          <div className="section-header text-center">
+            <h2 className="section-title">{t('home.faq.title')}</h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>
+              {t('home.faq.subtitle')}
+            </p>
+          </div>
+          <div className="faq-list">
+            {faqKeys.map((key, index) => (
+              <div 
+                key={index} 
+                className={`faq-item ${openFaq === index ? 'active' : ''}`}
+              >
+                <button 
+                  className="faq-question"
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                >
+                  <span>{t(`home.faq.questions.${key}.question`)}</span>
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    className="faq-icon"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
-                  <span>{t('about.sustainability.features.f1')}</span>
-                </div>
-                <div className="eco-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FAD124" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span>{t('about.sustainability.features.f2')}</span>
-                </div>
-                <div className="eco-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FAD124" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span>{t('about.sustainability.features.f3')}</span>
+                </button>
+                <div className="faq-answer">
+                  <p>{t(`home.faq.questions.${key}.answer`)}</p>
                 </div>
               </div>
-            </div>
-            <div className="sustainability-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#FAD124" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-              </svg>
-            </div>
+            ))}
           </div>
         </div>
       </section>

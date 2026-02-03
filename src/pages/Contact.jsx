@@ -13,6 +13,9 @@ function Contact() {
     phone: '',
     organization: '',
     serviceType: '',
+    bookingDate: '',
+    bookingTime: '',
+    numberOfBuses: '1',
     message: ''
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -40,8 +43,11 @@ function Contact() {
         phone: formData.phone || 'Not provided',
         organization: formData.organization || 'Not provided',
         service_type: formData.serviceType,
+        booking_date: formData.bookingDate || 'Not specified',
+        booking_time: formData.bookingTime || 'Not specified',
+        number_of_buses: formData.numberOfBuses || '1',
         message: formData.message,
-        to_email: 'autobusbensimhon@gmail.com'
+        to_email: 'info@autobusbensimhon.com'
       }
 
       await emailjs.send(
@@ -58,6 +64,9 @@ function Contact() {
         phone: '',
         organization: '',
         serviceType: '',
+        bookingDate: '',
+        bookingTime: '',
+        numberOfBuses: '1',
         message: ''
       })
     } catch (err) {
@@ -100,19 +109,6 @@ function Contact() {
                 <div className="info-card">
                   <div className="info-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                  </div>
-                  <div className="info-content">
-                    <h4>{t('contact.info.location.title')}</h4>
-                    <p>{t('contact.info.location.address')}</p>
-                  </div>
-                </div>
-
-                <div className="info-card">
-                  <div className="info-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
                   </div>
@@ -131,7 +127,20 @@ function Contact() {
                   </div>
                   <div className="info-content">
                     <h4>{t('contact.info.email.title')}</h4>
-                    <p>autobusbensimhon@gmail.com</p>
+                    <p>info@autobusbensimhon.com</p>
+                  </div>
+                </div>
+
+                <div className="info-card">
+                  <div className="info-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div className="info-content">
+                    <h4>{t('contact.info.location.title')}</h4>
+                    <p>Montreal, Quebec, Canada</p>
                   </div>
                 </div>
 
@@ -256,6 +265,45 @@ function Contact() {
                         </option>
                       ))}
                     </select>
+                  </div>
+
+                  {/* Booking Details */}
+                  <div className="form-row form-row-three">
+                      <div className="form-group">
+                        <label htmlFor="bookingDate">{t('contact.form.booking.date.label')}</label>
+                        <input
+                          type="date"
+                          id="bookingDate"
+                          name="bookingDate"
+                          value={formData.bookingDate}
+                          onChange={handleChange}
+                          min={new Date().toISOString().split('T')[0]}
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="bookingTime">{t('contact.form.booking.time.label')}</label>
+                        <input
+                          type="time"
+                          id="bookingTime"
+                          name="bookingTime"
+                          value={formData.bookingTime}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="numberOfBuses">{t('contact.form.booking.buses.label')}</label>
+                        <select
+                          id="numberOfBuses"
+                          name="numberOfBuses"
+                          value={formData.numberOfBuses}
+                          onChange={handleChange}
+                        >
+                          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
+                            <option key={num} value={num}>{num} {num === 1 ? t('contact.form.booking.buses.singular') : t('contact.form.booking.buses.plural')}</option>
+                          ))}
+                          <option value="10+">{t('contact.form.booking.buses.moreThan10')}</option>
+                        </select>
+                      </div>
                   </div>
 
                   <div className="form-group">
