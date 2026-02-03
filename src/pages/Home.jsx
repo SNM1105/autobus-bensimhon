@@ -10,7 +10,7 @@ function Home() {
       {/* Hero Section - Simplified with school bus background */}
       <section className="hero hero-fullscreen">
         <div className="hero-background">
-          <img src="public/schoolbus.png" alt="" />
+          <img src="/schoolbus.png" alt="" />
           <div className="hero-overlay"></div>
         </div>
         <div className="container">
