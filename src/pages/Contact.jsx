@@ -132,7 +132,7 @@ function Contact() {
                   </div>
                   <div className="info-content">
                     <h4>{t('contact.info.email.title')}</h4>
-                    <p>iautobusbensimhon@gmail.com</p>
+                    <p>autobusbensimhon@gmail.com</p>
                   </div>
                 </div>
 
