@@ -56,6 +56,8 @@
     "faq": {
       "title": "Questions fréquentes",
       "subtitle": "Trouvez des réponses aux questions courantes sur nos services de transport",
+      "stillHaveQuestions": "Vous avez encore des questions?",
+      "contactMessage": "Vous ne trouvez pas la réponse que vous cherchez? N'hésitez pas à contacter notre équipe.",
       "questions": {
         "q1": {
           "question": "Où opérez-vous?",

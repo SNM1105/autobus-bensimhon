@@ -4,9 +4,9 @@
 
 /* Hero Section */
 .faq-hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-  color: white;
-  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, var(--color-black) 0%, #222 100%);
+  color: var(--color-white);
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -46,7 +46,7 @@
 
 .faq-item:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-color: #3b82f6;
+  border-color: var(--color-primary);
 }
 
 .faq-question {
@@ -67,13 +67,13 @@
 }
 
 .faq-question:hover {
-  color: #3b82f6;
+  color: var(--color-primary);
 }
 
 .faq-icon {
   flex-shrink: 0;
   transition: transform 0.3s ease;
-  color: #3b82f6;
+  color: var(--color-primary);
 }
 
 .faq-item.active .faq-icon {
