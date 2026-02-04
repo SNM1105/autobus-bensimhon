@@ -40,11 +40,6 @@ function About() {
                   </div>
                   <p className="story-card-description">{t('about.story.cardDescription')}</p>
                 </div>
-                <div className="story-card-decoration">
-                  <div className="decoration-circle"></div>
-                  <div className="decoration-circle"></div>
-                  <div className="decoration-circle"></div>
-                </div>
               </div>
             </div>
           </div>

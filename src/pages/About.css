@@ -402,6 +402,10 @@
     padding: 30px 20px;
   }
 
+  .story-card-decoration {
+    display: none;
+  }
+
   .year-number {
     font-size: 2.8rem;
   }
