@@ -10,7 +10,7 @@
       "title": "Safe & Reliable",
       "titleHighlight": "School Bus",
       "titleEnd": "Transportation",
-      "description": "Trusted by Quebec families since 2007. We ensure every child arrives safely to school and back home, on time, every time.",
+      "description": "Trusted by Quebec families since 2007.",
       "getQuote": "Get a Quote",
       "ourServices": "Our Services"
     },
@@ -103,9 +103,9 @@
     },
     "story": {
       "title": "Our Story",
-      "p1": "Founded almost two decades ago in 2007, Autobus Bensimhon has grown to become a trusted provider of safe and reliable transportation for students throughout Quebec.",
-      "p2": "Our company's primary goal has always been to ensure that every child arrives to and back from school, safely and on time. Over the years, we have built lasting relationships with schools, parents, and communities across the province.",
-      "p3": "Today, we operate a modern fleet of buses and continue to invest in the latest safety technology and eco-friendly vehicles to better serve our communities and protect our environment.",
+      "p1": "Founded in 2007, our school bus company has proudly served families and communities with one clear mission: to provide safe, reliable, and punctual transportation for students. From our very first route, we have been committed to putting children's safety and well-being first.",
+      "p2": "With years of experience in student transportation, we operate with highly trained drivers, well-maintained vehicles, and strict safety standards. We understand that parents trust us with what matters most, and we take that responsibility seriously every single day.",
+      "p3": "",
       "cardTitle": "Founded in Quebec",
       "cardDescription": "Started with a vision to provide the safest school transportation services in the region."
     },
@@ -118,30 +118,26 @@
     "values": {
       "title": "Our Core Values",
       "safety": {
-        "title": "Safety",
-        "description": "Every decision we make prioritizes the safety of the children in our care."
+        "title": "Safety and Reliability",
+        "description": "Every decision we make prioritizes the safety of the children in our care, with consistent and dependable service."
       },
-      "reliability": {
-        "title": "Reliability",
-        "description": "We deliver consistent, dependable service that families and schools can count on."
+      "punctuality": {
+        "title": "Punctual",
+        "description": "We understand that timing is crucial for families and schools. Our punctual service ensures students arrive on time, every time."
+      },
+      "goodPrices": {
+        "title": "Good Prices",
+        "description": "We always try to do our best for the community with competitive and fair pricing."
       },
       "integrity": {
         "title": "Integrity",
         "description": "We operate with honesty and transparency in all our business relationships."
-      },
-      "excellence": {
-        "title": "Excellence",
-        "description": "We continuously strive to exceed expectations and improve our services."
       }
     },
     "sustainability": {
-      "title": "Committed to Sustainability",
-      "description": "Autobus Bensimhon is committed to sustainability, slowly incorporating eco-friendly practices and working toward a greener future for school transportation.",
-      "features": {
-        "f1": "Gradual transition to eco-friendly vehicles",
-        "f2": "Route optimization to reduce emissions",
-        "f3": "Driver training for fuel-efficient driving"
-      }
+      "title": "",
+      "description": "",
+      "features": {}
     },
     "cta": {
       "title": "Ready to Learn More?",
@@ -266,7 +262,7 @@
       }
     },
     "form": {
-      "title": "Send Us a Message",
+      "title": "Get a Quote",
       "name": {
         "label": "Full Name",
         "placeholder": "Your name"
@@ -299,16 +295,27 @@
         "label": "Message",
         "placeholder": "Tell us about your transportation needs..."
       },
+      "sendMessage": {
+        "label": "Send Us a Message",
+        "title": "Send Us a Message"
+      },
       "booking": {
         "title": "Booking Details",
-        "date": {
-          "label": "Preferred Date"
+        "pickupTime": {
+          "label": "Pick up Time"
         },
-        "time": {
-          "label": "Preferred Time"
+        "dropoffTime": {
+          "label": "Drop off Time"
+        },
+        "from": {
+          "label": "From where"
+        },
+        "to": {
+          "label": "To where"
         },
         "buses": {
           "label": "# of Buses",
+          "capacity": "max 48 people per bus",
           "singular": "Bus",
           "plural": "Buses",
           "moreThan10": "More than 10"

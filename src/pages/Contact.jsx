@@ -13,8 +13,10 @@ function Contact() {
     phone: '',
     organization: '',
     serviceType: '',
-    bookingDate: '',
-    bookingTime: '',
+    pickupTime: '',
+    dropoffTime: '',
+    fromLocation: '',
+    toLocation: '',
     numberOfBuses: '1',
     message: ''
   })
@@ -43,11 +45,13 @@ function Contact() {
         phone: formData.phone || 'Not provided',
         organization: formData.organization || 'Not provided',
         service_type: formData.serviceType,
-        booking_date: formData.bookingDate || 'Not specified',
-        booking_time: formData.bookingTime || 'Not specified',
+        pickup_time: formData.pickupTime || 'Not specified',
+        dropoff_time: formData.dropoffTime || 'Not specified',
+        from_location: formData.fromLocation || 'Not specified',
+        to_location: formData.toLocation || 'Not specified',
         number_of_buses: formData.numberOfBuses || '1',
         message: formData.message,
-        to_email: 'info@autobusbensimhon.com'
+        to_email: 'iautobusbensimhon@gmail.com'
       }
 
       await emailjs.send(
@@ -64,8 +68,10 @@ function Contact() {
         phone: '',
         organization: '',
         serviceType: '',
-        bookingDate: '',
-        bookingTime: '',
+        pickupTime: '',
+        dropoffTime: '',
+        fromLocation: '',
+        toLocation: '',
         numberOfBuses: '1',
         message: ''
       })
@@ -87,8 +93,7 @@ function Contact() {
   ]
 
   return (
-    <div className="contact-page">
-      {/* Hero Section */}
+    <div className="contact-page">{/* Hero Section */}
       <section className="contact-hero">
         <div className="container">
           <h1>{t('contact.hero.title')}</h1>
@@ -127,7 +132,7 @@ function Contact() {
                   </div>
                   <div className="info-content">
                     <h4>{t('contact.info.email.title')}</h4>
-                    <p>info@autobusbensimhon.com</p>
+                    <p>iautobusbensimhon@gmail.com</p>
                   </div>
                 </div>
 
@@ -195,7 +200,7 @@ function Contact() {
                 </div>
               ) : (
                 <form className="contact-form" onSubmit={handleSubmit}>
-                  <h2>{t('contact.form.title')}</h2>
+                  <h2>{t('contact.form.sendMessage.title')}</h2>
                   
                   <div className="form-row">
                     <div className="form-group">
@@ -250,6 +255,22 @@ function Contact() {
                   </div>
 
                   <div className="form-group">
+                    <label htmlFor="message">{t('contact.form.message.label')} *</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows="5"
+                      placeholder={t('contact.form.message.placeholder')}
+                    ></textarea>
+                  </div>
+
+                  {/* Get a Quote Section */}
+                  <h3 style={{ marginTop: '30px', marginBottom: '20px' }}>{t('contact.form.title')}</h3>
+
+                  <div className="form-group">
                     <label htmlFor="serviceType">{t('contact.form.serviceType.label')} *</label>
                     <select
                       id="serviceType"
@@ -268,55 +289,74 @@ function Contact() {
                   </div>
 
                   {/* Booking Details */}
-                  <div className="form-row form-row-three">
-                      <div className="form-group">
-                        <label htmlFor="bookingDate">{t('contact.form.booking.date.label')}</label>
-                        <input
-                          type="date"
-                          id="bookingDate"
-                          name="bookingDate"
-                          value={formData.bookingDate}
-                          onChange={handleChange}
-                          min={new Date().toISOString().split('T')[0]}
-                        />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="bookingTime">{t('contact.form.booking.time.label')}</label>
-                        <input
-                          type="time"
-                          id="bookingTime"
-                          name="bookingTime"
-                          value={formData.bookingTime}
-                          onChange={handleChange}
-                        />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="numberOfBuses">{t('contact.form.booking.buses.label')}</label>
-                        <select
-                          id="numberOfBuses"
-                          name="numberOfBuses"
-                          value={formData.numberOfBuses}
-                          onChange={handleChange}
-                        >
-                          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
-                            <option key={num} value={num}>{num} {num === 1 ? t('contact.form.booking.buses.singular') : t('contact.form.booking.buses.plural')}</option>
-                          ))}
-                          <option value="10+">{t('contact.form.booking.buses.moreThan10')}</option>
-                        </select>
-                      </div>
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="pickupTime">{t('contact.form.booking.pickupTime.label')}</label>
+                      <input
+                        type="time"
+                        id="pickupTime"
+                        name="pickupTime"
+                        value={formData.pickupTime}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="dropoffTime">{t('contact.form.booking.dropoffTime.label')}</label>
+                      <input
+                        type="time"
+                        id="dropoffTime"
+                        name="dropoffTime"
+                        value={formData.dropoffTime}
+                        onChange={handleChange}
+                      />
+                    </div>
                   </div>
 
-                  <div className="form-group">
-                    <label htmlFor="message">{t('contact.form.message.label')} *</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows="5"
-                      placeholder={t('contact.form.message.placeholder')}
-                    ></textarea>
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="fromLocation">{t('contact.form.booking.from.label')}</label>
+                      <input
+                        type="text"
+                        id="fromLocation"
+                        name="fromLocation"
+                        value={formData.fromLocation}
+                        onChange={handleChange}
+                        placeholder="e.g., 123 Main St, Montreal"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="toLocation">{t('contact.form.booking.to.label')}</label>
+                      <input
+                        type="text"
+                        id="toLocation"
+                        name="toLocation"
+                        value={formData.toLocation}
+                        onChange={handleChange}
+                        placeholder="e.g., School Name, Montreal"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-row form-row-single">
+                    <div className="form-group">
+                      <label htmlFor="numberOfBuses">
+                        {t('contact.form.booking.buses.label')} 
+                        <span style={{ fontWeight: 'normal', fontSize: '0.85em', marginLeft: '8px', color: '#666' }}>
+                          ({t('contact.form.booking.buses.capacity')})
+                        </span>
+                      </label>
+                      <select
+                        id="numberOfBuses"
+                        name="numberOfBuses"
+                        value={formData.numberOfBuses}
+                        onChange={handleChange}
+                      >
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
+                          <option key={num} value={num}>{num} {num === 1 ? t('contact.form.booking.buses.singular') : t('contact.form.booking.buses.plural')}</option>
+                        ))}
+                        <option value="10+">{t('contact.form.booking.buses.moreThan10')}</option>
+                      </select>
+                    </div>
                   </div>
 
                   <button type="submit" className="btn btn-primary btn-submit" disabled={isLoading}>

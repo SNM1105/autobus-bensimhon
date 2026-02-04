@@ -10,7 +10,7 @@
       "title": "Transport scolaire",
       "titleHighlight": "sécuritaire",
       "titleEnd": "et fiable",
-      "description": "La confiance des familles québécoises depuis 2007. Nous assurons que chaque enfant arrive à l'école et rentre à la maison en toute sécurité, à l'heure, chaque jour.",
+      "description": "La confiance des familles québécoises depuis 2007.",
       "getQuote": "Obtenir un devis",
       "ourServices": "Nos services"
     },
@@ -103,45 +103,41 @@
     },
     "story": {
       "title": "Notre histoire",
-      "p1": "Fondée il y a près de deux décennies en 2007, Autobus Bensimhon est devenue un fournisseur de confiance de transport sécuritaire et fiable pour les élèves à travers le Québec.",
-      "p2": "L'objectif principal de notre entreprise a toujours été de s'assurer que chaque enfant arrive à l'école et en revienne en toute sécurité et à l'heure. Au fil des ans, nous avons bâti des relations durables avec les écoles, les parents et les communautés à travers la province.",
-      "p3": "Aujourd'hui, nous exploitons une flotte moderne d'autobus et continuons d'investir dans les dernières technologies de sécurité et les véhicules écologiques pour mieux servir nos communautés et protéger notre environnement.",
+      "p1": "Fondée en 2007, notre entreprise de transport scolaire à fièrement aidé les familles et les communautés avec une mission claire: offrir un transport sécuritaire, fiable et ponctuel aux élèves. Dès notre tout premier trajet, nous nous sommes engagés à placer la sécurité et le bien-être des enfants au cœur de nos priorités.",
+      "p2": "Forts de nombreuses années d'expérience dans le transport scolaire, nous comptons sur des chauffeurs hautement qualifiés, des véhicules soigneusement entretenus et des normes de sécurité rigoureuses. Nous savons que les parents nous confient ce qu'ils ont de plus précieux, et nous prenons cette responsabilité très au sérieux, chaque jour.",
+      "p3": "",
       "cardTitle": "Fondée au Québec",
       "cardDescription": "Démarrée avec la vision de fournir les services de transport scolaire les plus sécuritaires de la région."
     },
     "mission": {
       "title": "Notre mission",
-      "description": "Fournir les services de transport scolaire les plus sécuritaires et fiables tout en cultivant la confiance avec les familles et les écoles à travers le Québec.",
+      "description": "Fournir les services de transport scolaire les plus sûrs, fiables et ponctuels tout en favorisant la confiance avec les familles et les écoles de la province du Québec.",
       "visionTitle": "Notre vision",
-      "visionDescription": "Être reconnu comme le fournisseur de transport scolaire le plus fiable du Québec, connu pour notre engagement inébranlable envers la sécurité, la durabilité et le partenariat communautaire."
+      "visionDescription": "Être reconnu comme le fournisseur de transport scolaire le plus fiable du Québec, connu pour notre engagement inébranlable envers la sécurité, la ponctualité et le partenariat communautaire."
     },
     "values": {
       "title": "Nos valeurs fondamentales",
       "safety": {
-        "title": "Sécurité",
-        "description": "Chaque décision que nous prenons priorise la sécurité des enfants dont nous avons la charge."
+        "title": "Sécurité et fiabilité",
+        "description": "La sécurité de chaque enfant est notre priorité absolue. Nos chauffeurs sont des professionnels formés et nos autobus répondent aux normes de sécurité les plus élevées, avec un service fiable et constant."
       },
-      "reliability": {
-        "title": "Fiabilité",
-        "description": "Nous offrons un service constant et fiable sur lequel les familles et les écoles peuvent compter."
+      "punctuality": {
+        "title": "Ponctuel",
+        "description": "Nous comprenons que le timing est crucial pour les familles et les écoles. Notre service ponctuel assure que les élèves arrivent à l'heure, chaque fois."
+      },
+      "goodPrices": {
+        "title": "Bons prix",
+        "description": "Nous faisons toujours de notre mieux pour la communauté avec une tarification compétitive et juste."
       },
       "integrity": {
         "title": "Intégrité",
-        "description": "Nous opérons avec honnêteté et transparence dans toutes nos relations d'affaires."
-      },
-      "excellence": {
-        "title": "Excellence",
-        "description": "Nous nous efforçons continuellement de dépasser les attentes et d'améliorer nos services."
+        "description": "Nous opérons avec honnêteté et transparence dans toutes nos relations commerciales."
       }
     },
     "sustainability": {
-      "title": "Engagés envers la durabilité",
-      "description": "Autobus Bensimhon est engagé envers la durabilité, incorporant progressivement des pratiques écologiques et travaillant vers un avenir plus vert pour le transport scolaire.",
-      "features": {
-        "f1": "Transition graduelle vers des véhicules écologiques",
-        "f2": "Optimisation des itinéraires pour réduire les émissions",
-        "f3": "Formation des chauffeurs pour une conduite économe en carburant"
-      }
+      "title": "",
+      "description": "",
+      "features": {}
     },
     "cta": {
       "title": "Prêt à en savoir plus?",
@@ -266,7 +262,7 @@
       }
     },
     "form": {
-      "title": "Envoyez-nous un message",
+      "title": "Obtenez un devis",
       "name": {
         "label": "Nom complet",
         "placeholder": "Votre nom"
@@ -299,16 +295,27 @@
         "label": "Message",
         "placeholder": "Parlez-nous de vos besoins de transport..."
       },
+      "sendMessage": {
+        "label": "Envoyez-nous un message",
+        "title": "Envoyez-nous un message"
+      },
       "booking": {
         "title": "Détails de réservation",
-        "date": {
-          "label": "Date préférée"
+        "pickupTime": {
+          "label": "Heure de départ"
         },
-        "time": {
-          "label": "Heure préférée"
+        "dropoffTime": {
+          "label": "Heure de retour"
+        },
+        "from": {
+          "label": "À partir d'où"
+        },
+        "to": {
+          "label": "Vers où"
         },
         "buses": {
           "label": "# d'autobus",
+          "capacity": "max 48 passagers par autobus",
           "singular": "Autobus",
           "plural": "Autobus",
           "moreThan10": "Plus de 10"

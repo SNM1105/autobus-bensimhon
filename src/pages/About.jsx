@@ -27,7 +27,6 @@ function About() {
               <h2>{t('about.story.title')}</h2>
               <p>{t('about.story.p1')}</p>
               <p>{t('about.story.p2')}</p>
-              <p>{t('about.story.p3')}</p>
             </div>
             <div className="story-image">
               <div className="story-card">
@@ -102,22 +101,22 @@ function About() {
             <div className="value-item">
               <div className="value-number">02</div>
               <div className="value-content">
-                <h3>{t('about.values.reliability.title')}</h3>
-                <p>{t('about.values.reliability.description')}</p>
+                <h3>{t('about.values.punctuality.title')}</h3>
+                <p>{t('about.values.punctuality.description')}</p>
               </div>
             </div>
             <div className="value-item">
               <div className="value-number">03</div>
               <div className="value-content">
-                <h3>{t('about.values.integrity.title')}</h3>
-                <p>{t('about.values.integrity.description')}</p>
+                <h3>{t('about.values.goodPrices.title')}</h3>
+                <p>{t('about.values.goodPrices.description')}</p>
               </div>
             </div>
             <div className="value-item">
               <div className="value-number">04</div>
               <div className="value-content">
-                <h3>{t('about.values.excellence.title')}</h3>
-                <p>{t('about.values.excellence.description')}</p>
+                <h3>{t('about.values.integrity.title')}</h3>
+                <p>{t('about.values.integrity.description')}</p>
               </div>
             </div>
           </div>
