@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Accueil",
-    "about": "À propos",
+    "about": "À propos de nous",
+    "faq": "FAQ",
     "services": "Services",
     "contact": "Contact"
   },

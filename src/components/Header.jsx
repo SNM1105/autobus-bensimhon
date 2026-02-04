@@ -46,6 +46,9 @@ function Header() {
             <NavLink to="/about" className="nav-link" onClick={closeMenu}>
               {t('nav.about')}
             </NavLink>
+            <NavLink to="/faq" className="nav-link" onClick={closeMenu}>
+              {t('nav.faq')}
+            </NavLink>
             <NavLink to="/services" className="nav-link" onClick={closeMenu}>
               {t('nav.services')}
             </NavLink>
