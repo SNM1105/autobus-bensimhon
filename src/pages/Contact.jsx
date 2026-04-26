@@ -120,6 +120,7 @@ function Contact() {
                   <div className="info-content">
                     <h4>{t('contact.info.phone.title')}</h4>
                     <p>(514) 644-2454</p>
+                    <p>(514) 983-9247</p>
                   </div>
                 </div>
 
