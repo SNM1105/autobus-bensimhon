@@ -108,6 +108,44 @@ function About() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="section faq-section">
+        <div className="container">
+          <h2 className="section-title text-center">Frequently Asked Questions</h2>
+          <p className="faq-subtitle">Everything you need to know about our air filters</p>
+          <div className="faq-grid">
+            <div className="faq-card">
+              <h4>❓ What size filter do I need?</h4>
+              <p>Check your current furnace filter or your furnace manual for the size. Common sizes are 16x25x1, 20x25x1, and 16x25x4. Contact us if you're unsure.</p>
+            </div>
+            <div className="faq-card">
+              <h4>❓ How often should I replace my filter?</h4>
+              <p>Most filters should be replaced every 1-3 months, depending on usage and filter type. Check your filter monthly and replace when it looks dirty.</p>
+            </div>
+            <div className="faq-card">
+              <h4>❓ What's the difference between filter types?</h4>
+              <p>Standard filters provide basic air cleaning. Allergen filters capture smaller particles for allergy relief. Premium filters offer maximum protection. Pet filters are designed for pet owner homes.</p>
+            </div>
+            <div className="faq-card">
+              <h4>❓ How do I install a new filter?</h4>
+              <p>Installation is simple! Turn off your furnace, locate the filter slot, remove the old filter, and slide in the new one with the arrow pointing toward your furnace. Turn your system back on.</p>
+            </div>
+            <div className="faq-card">
+              <h4>❓ How fast is shipping?</h4>
+              <p>We offer fast delivery within 2-3 business days to most areas. Expedited delivery options are available at checkout.</p>
+            </div>
+            <div className="faq-card">
+              <h4>❓ Do you have a satisfaction guarantee?</h4>
+              <p>Yes! If you're not satisfied with your filters, contact us within 30 days for a full refund or replacement.</p>
+            </div>
+            <div className="faq-card">
+              <h4>❓ Can you help me choose the right filter?</h4>
+              <p>Absolutely! Contact our team and let us know about your home, any allergies, or pets. We'll recommend the perfect filter for your needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="about-cta">
         <div className="container">
@@ -115,7 +153,7 @@ function About() {
           <p>Shop our selection of premium furnace air filters today.</p>
           <div className="cta-buttons">
             <Link to="/products" className="btn btn-primary">Shop Filters</Link>
-            <Link to="/contact" className="btn btn-outline">Questions?</Link>
+            <Link to="/products" className="btn btn-outline">View Cart</Link>
           </div>
         </div>
       </section>

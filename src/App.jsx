@@ -3,10 +3,9 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
-import Contact from './pages/Contact'
+import Cart from './pages/Cart'
 import About from './pages/About'
 import Products from './pages/Products'
-import FAQ from './pages/FAQ'
 import './App.css'
 
 function App() {
@@ -19,8 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </main>
       <Footer />

@@ -1,11 +1,13 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import { useLanguage } from '../context/LanguageContext'
+import { useCart } from '../context/CartContext'
 import './Header.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { language, toggleLanguage, t } = useLanguage()
+  const { cart } = useCart()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -46,15 +48,12 @@ function Header() {
             <NavLink to="/about" className="nav-link" onClick={closeMenu}>
               {t('nav.about')}
             </NavLink>
-            <NavLink to="/products" className="nav-link" onClick={closeMenu}>
+            <NavLink to="/products" className="nav-link shop-link" onClick={closeMenu}>
               {t('nav.products')}
             </NavLink>
-            <NavLink to="/faq" className="nav-link" onClick={closeMenu}>
-              {t('nav.faq')}
-            </NavLink>
-            <NavLink to="/contact" className="nav-link nav-link-cta" onClick={closeMenu}>
-              {t('nav.contact')}
-            </NavLink>
+            <Link to="/cart" className="cart-button" onClick={closeMenu} title="View cart">
+              🛒 {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
+            </Link>
             <button 
               className="language-toggle"
               onClick={toggleLanguage}
