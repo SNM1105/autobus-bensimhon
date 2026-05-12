@@ -21,11 +21,11 @@ function Header() {
         <div className="header-content">
           <Link to="/" className="logo" onClick={closeMenu}>
             <div className="logo-icon">
-              <img src="/autobus-bensimhon-logo.png" alt="Autobus Bensimhon" />
+              <span className="filter-icon">🔵</span>
             </div>
             <div className="logo-text">
-              <span className="logo-name">AUTOBUS</span>
-              <span className="logo-name">BENSIMHON</span>
+              <span className="logo-name">AIR FILTER</span>
+              <span className="logo-name">CO.</span>
             </div>
           </Link>
 
@@ -46,11 +46,11 @@ function Header() {
             <NavLink to="/about" className="nav-link" onClick={closeMenu}>
               {t('nav.about')}
             </NavLink>
+            <NavLink to="/products" className="nav-link" onClick={closeMenu}>
+              {t('nav.products')}
+            </NavLink>
             <NavLink to="/faq" className="nav-link" onClick={closeMenu}>
               {t('nav.faq')}
-            </NavLink>
-            <NavLink to="/services" className="nav-link" onClick={closeMenu}>
-              {t('nav.services')}
             </NavLink>
             <NavLink to="/contact" className="nav-link nav-link-cta" onClick={closeMenu}>
               {t('nav.contact')}

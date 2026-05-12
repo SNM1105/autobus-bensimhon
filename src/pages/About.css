@@ -4,100 +4,289 @@
 
 /* About Hero */
 .about-hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary) 100%);
-  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #003d99 100%);
+  padding: 100px 0;
   text-align: center;
+  color: var(--color-white);
 }
 
 .about-hero h1 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 15px;
-  color: var(--color-black);
-  animation: fadeInUp 0.6s ease-out;
+  color: var(--color-white);
 }
 
-.about-hero p {
-  font-size: 1.2rem;
-  color: #333;
-  animation: fadeInUp 0.6s ease-out 0.1s backwards;
+/* Mission Section */
+.mission-section {
+  padding: 100px 0;
 }
 
-/* Company Story */
-.story-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
-  align-items: center;
+.content-grid {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.story-content h2 {
+.text-content h2 {
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 25px;
+  color: var(--color-primary);
+}
+
+.large-text {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--color-gray);
+}
+
+/* Why We Do It Section */
+.why-we-do-it {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background-color: var(--color-white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-primary);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
   color: var(--color-black);
 }
 
-.story-content p {
+.value-card p {
+  font-size: 1rem;
   color: var(--color-gray);
-  line-height: 1.8;
+  line-height: 1.7;
+}
+
+/* What We Offer Section */
+.what-we-offer {
+  padding: 100px 0;
+  background-color: var(--color-white);
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.offer-card {
+  background-color: var(--color-primary-light);
+  padding: 35px 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 2px solid var(--color-primary);
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+}
+
+.offer-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.offer-card p {
+  font-size: 1rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+/* Filter Info Section */
+.filter-info {
+  padding: 100px 0;
+}
+
+.filters-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.filter-info-card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.filter-info-card:hover {
+  transform: translateY(-5px);
+}
+
+.filter-color {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
-.story-card {
-  position: relative;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  color: var(--color-white);
-  padding: 45px;
-  border-radius: 24px;
-  text-align: center;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.filter-info-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 10px;
 }
 
-.story-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+.filter-info-card p {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-.story-card-inner {
-  position: relative;
-  z-index: 2;
-}
-
-.year-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 25px;
-}
-
-.year-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 3px;
+.price {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--color-primary);
-  opacity: 0.9;
+  margin-top: 10px;
 }
 
-.year-number {
-  font-size: 4rem;
-  font-weight: 800;
-  line-height: 1;
-  background: linear-gradient(135deg, var(--color-primary) 0%, #F89406 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 4px 20px rgba(250, 209, 36, 0.3);
+/* CTA Section */
+.about-cta {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #003d99 100%);
+  padding: 80px 0;
+  text-align: center;
+  color: var(--color-white);
 }
 
-.location-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: rgba(250, 209, 36, 0.15);
+.about-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+  color: #E0E8FF;
+  margin-bottom: 35px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  font-size: 1.1rem;
+  padding: 14px 30px;
+  font-weight: 600;
+}
+
+.cta-buttons .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: #E0E8FF;
+}
+
+.cta-buttons .btn-outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.cta-buttons .btn-outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .text-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .large-text {
+    font-size: 1rem;
+  }
+
+  .values-grid,
+  .offers-grid,
+  .filters-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .text-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-cta h2 {
+    font-size: 1.8rem;
+  }
+}
   color: var(--color-primary);
   padding: 10px 20px;
   border-radius: 50px;

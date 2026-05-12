@@ -40,10 +40,14 @@
 }
 
 .logo-name {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   letter-spacing: 1px;
-  color: var(--color-black);
+  color: var(--color-primary);
+}
+
+.filter-icon {
+  font-size: 30px;
 }
 
 .nav {
@@ -54,7 +58,7 @@
 
 .nav-link {
   padding: 10px 20px;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--color-black);
   border-radius: 6px;
